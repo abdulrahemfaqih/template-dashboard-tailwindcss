@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,7 +60,7 @@
             <nav class="mt-6">
                 <div class="px-4 space-y-2">
                     <!-- Dashboard Menu -->
-                    <a href="#" class="flex items-center px-4 py-2 text-gray-700 bg-gray-100 rounded-lg">
+                <a href="../index.html" class="flex items-center px-4 py-2 text-gray-700 bg-gray-100 rounded-lg">
                         <svg class="w-5 h-5 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
@@ -82,9 +86,9 @@
                             </svg>
                         </button>
                         <div class="submenu pl-8 space-y-1 hidden">
-                            <a href="form.html"
+                            <a href="../pages/table.html"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Tables</a>
-                            <a href="table.html"
+                            <a href="../pages/form.html"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Forms</a>
                         </div>
                     </div>
@@ -117,87 +121,56 @@
             </nav>
         </div>
     </aside>
-
-    <main class="ml-0 md:ml-64 pt-20 p-6">
+    <main class="ml-0 md:ml-64 pt-16 p-6">
         <div class="bg-white rounded-lg border border-gray-200 p-6">
-            <div class="flex justify-between items-center mb-6">
-                <h3 class="text-xl font-bold">Data Tables</h3>
-                <div class="flex space-x-2">
-                    <input type="text" placeholder="Search..."
-                        class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400">
-                    <button class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700">Add New</button>
+            <h3 class="text-xl font-bold mb-6">Button Components</h3>
+
+            <!-- Primary Buttons -->
+            <div class="border-b border-gray-200 pb-6 mb-6">
+                <h4 class="text-lg font-medium mb-4">Primary Buttons</h4>
+                <div class="space-y-4">
+                    <button class="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700">Primary
+                        Button</button>
+                    <button
+                        class="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                        disabled>Disabled Button</button>
+                    <button class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 text-lg">Large
+                        Button</button>
+                    <button class="px-3 py-1 bg-gray-800 text-white rounded-lg hover:bg-gray-700 text-sm">Small
+                        Button</button>
                 </div>
             </div>
 
-            <div class="overflow-x-auto">
-                <table class="min-w-full divide-y divide-gray-200">
-                    <thead>
-                        <tr>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                <input type="checkbox" class="rounded border-gray-300">
-                            </th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                ID</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Name</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Email</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Status</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Date</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody class="bg-white divide-y divide-gray-200">
-                        <tr>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <input type="checkbox" class="rounded border-gray-300">
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">#12345</td>
-                            <td class="px-6 py-4 whitespace-nowrap">John Doe</td>
-                            <td class="px-6 py-4 whitespace-nowrap">john@example.com</td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span
-                                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Active</span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">2024-01-01</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                <button class="text-blue-600 hover:text-blue-900 mr-3">Edit</button>
-                                <button class="text-red-600 hover:text-red-900">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <input type="checkbox" class="rounded border-gray-300">
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">#12346</td>
-                            <td class="px-6 py-4 whitespace-nowrap">Jane Smith</td>
-                            <td class="px-6 py-4 whitespace-nowrap">jane@example.com</td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span
-                                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">Pending</span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">2024-01-02</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                <button class="text-blue-600 hover:text-blue-900 mr-3">Edit</button>
-                                <button class="text-red-600 hover:text-red-900">Delete</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <!-- Outline Buttons -->
+            <div class="border-b border-gray-200 pb-6 mb-6">
+                <h4 class="text-lg font-medium mb-4">Outline Buttons</h4>
+                <div class="space-y-4">
+                    <button class="px-4 py-2 border border-gray-800 text-gray-800 rounded-lg hover:bg-gray-100">Outline
+                        Button</button>
+                    <button
+                        class="px-4 py-2 border border-gray-800 text-gray-800 rounded-lg hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
+                        disabled>Disabled Outline</button>
+                </div>
             </div>
 
-            <!-- Pagination -->
-            <div class="flex items-center justify-between mt-6">
-                <div class="text-sm text-gray-500">
-                    Showing 1 to 2 of 2 entries
-                </div>
-                <div class="flex space-x-2">
-                    <button class="px-3 py-1 border border-gray-300 rounded-lg hover:bg-gray-50">Previous</button>
-                    <button class="px-3 py-1 bg-gray-800 text-white rounded-lg">1</button>
-                    <button class="px-3 py-1 border border-gray-300 rounded-lg hover:bg-gray-50">Next</button>
+            <!-- Icon Buttons -->
+            <div>
+                <h4 class="text-lg font-medium mb-4">Icon Buttons</h4>
+                <div class="space-x-4">
+                    <button class="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                        </svg>
+                    </button>
+                    <button
+                        class="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                        </svg>
+                        <span>Button with Icon</span>
+                    </button>
                 </div>
             </div>
         </div>

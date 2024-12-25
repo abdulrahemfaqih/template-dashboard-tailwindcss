@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Template</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+
+        /* Tambahan CSS untuk mobile menu */
+        @media (max-width: 768px) {
+            .mobile-menu-open {
+                transform: translateX(0) !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Header dengan z-index lebih tinggi -->
+    <header class="bg-white border-b border-gray-200 fixed w-full top-0 z-50">
+        <div class="flex justify-between items-center px-6 py-3">
+            <div class="flex items-center">
+                <span class="text-xl font-bold">Logo</span>
+            </div>
+            <!-- Mobile Menu Button dengan z-index yang sesuai -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <div class="hidden md:flex items-center space-x-4">
+                <div class="relative">
+                    <button id="profile-button" class="flex items-center space-x-2">
+                        <img src="https://via.placeholder.com/40" alt="Profile" class="w-8 h-8 rounded-full">
+                        <span>John Doe</span>
+                    </button>
+                    <div id="profile-dropdown" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg hidden">
+                        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Profile</a>
+                        <a href="login.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar dengan z-index di bawah header -->
+    <aside id="sidebar"
+        class="fixed left-0 top-0 h-screen w-64 bg-white border-r border-gray-200 transform -translate-x-full md:translate-x-0 transition-transform duration-200 ease-in-out z-40">
+        <!-- Tambahan padding top agar tidak tertutup header -->
+        <div class="pt-16">
+            <nav class="mt-6">
+                <div class="px-4 space-y-2">
+                    <!-- Dashboard Menu -->
+                    <a href="../index.html" class="flex items-center px-4 py-2 text-gray-700 bg-gray-100 rounded-lg">
+                        <svg class="w-5 h-5 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                        <span>Dashboard</span>
+                    </a>
+
+                    <!-- Components Menu -->
+                    <div class="space-y-2">
+                        <button
+                            class="submenu-button flex items-center justify-between w-full px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+                                <span>Components</span>
+                            </div>
+                            <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="submenu pl-8 space-y-1 hidden">
+                            <a href="input.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Input</a>
+                            <a href="button.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Buttbn</a>
+                            <a href="alerts.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Alerts</a>
+                        </div>
+                    </div>
+
+                    <!-- Pages Menu -->
+                    <div class="space-y-2">
+                        <button
+                            class="submenu-button flex items-center justify-between w-full px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                </svg>
+                                <span>Pages</span>
+                            </div>
+                            <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="submenu pl-8 space-y-1 hidden">
+                            <a href="../pages/login.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Login</a>
+                            <a href="../pages/register.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Register</a>
+                            <a href="../pages/table.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Register</a>
+                            <a href="../pages/form.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </aside>
+    <main class="ml-0 md:ml-64 pt-16 p-6">
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+            <h3 class="text-xl font-bold mb-6">Alert Components</h3>
+
+            <!-- Basic Alerts -->
+            <div class="border-b border-gray-200 pb-6 mb-6">
+                <h4 class="text-lg font-medium mb-4">Basic Alerts</h4>
+                <div class="space-y-4">
+                    <!-- Success Alert -->
+                    <div class="p-4 border-l-4 border-green-500 bg-green-50 rounded-lg flex items-start">
+                        <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold text-green-800">Success</h3>
+                            <p class="text-green-700">Operation completed successfully.</p>
+                        </div>
+                    </div>
+
+                    <!-- Error Alert -->
+                    <div class="p-4 border-l-4 border-red-500 bg-red-50 rounded-lg flex items-start">
+                        <svg class="w-5 h-5 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold text-red-800">Error</h3>
+                            <p class="text-red-700">An error occurred while processing your request.</p>
+                        </div>
+                    </div>
+
+                    <!-- Warning Alert -->
+                    <div class="p-4 border-l-4 border-yellow-500 bg-yellow-50 rounded-lg flex items-start">
+                        <svg class="w-5 h-5 text-yellow-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold text-yellow-800">Warning</h3>
+                            <p class="text-yellow-700">Please review your information before continuing.</p>
+                        </div>
+                    </div>
+
+                    <!-- Info Alert -->
+                    <div class="p-4 border-l-4 border-blue-500 bg-blue-50 rounded-lg flex items-start">
+                        <svg class="w-5 h-5 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold text-blue-800">Information</h3>
+                            <p class="text-blue-700">Updated information is now available.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dismissible Alerts -->
+            <div>
+                <h4 class="text-lg font-medium mb-4">Dismissible Alerts</h4>
+                <div class="space-y-4">
+                    <!-- Dismissible Success Alert -->
+                    <div
+                        class="dismissible-alert p-4 border-l-4 border-green-500 bg-green-50 rounded-lg flex items-start justify-between">
+                        <div class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold text-green-800">Success</h3>
+                                <p class="text-green-700">Operation completed successfully.</p>
+                            </div>
+                        </div>
+                        <button class="text-green-500 hover:text-green-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Dismissible Error Alert -->
+                    <div
+                        class="dismissible-alert p-4 border-l-4 border-red-500 bg-red-50 rounded-lg flex items-start justify-between">
+                        <div class="flex items-start">
+                            <svg class="w-5 h-5 text-red-500 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold text-red-800">Error</h3>
+                                <p class="text-red-700">An error occurred while processing your request.</p>
+                            </div>
+                        </div>
+                        <button class="text-red-500 hover:text-red-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Dismissible Warning Alert -->
+                    <div
+                        class="dismissible-alert p-4 border-l-4 border-yellow-500 bg-yellow-50 rounded-lg flex items-start justify-between">
+                        <div class="flex items-start">
+                            <svg class="w-5 h-5 text-yellow-500 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold text-yellow-800">Warning</h3>
+                                <p class="text-yellow-700">Please review your information before continuing.</p>
+                            </div>
+                        </div>
+                        <button class="text-yellow-500 hover:text-yellow-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Dismissible Info Alert -->
+                    <div
+                        class="dismissible-alert p-4 border-l-4 border-blue-500 bg-blue-50 rounded-lg flex items-start justify-between">
+                        <div class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-500 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold text-blue-800">Information</h3>
+                                <p class="text-blue-700">Updated information is now available.</p>
+                            </div>
+                        </div>
+                        <button class="text-blue-500 hover:text-blue-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        // Mobile menu toggle dengan perbaikan
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const sidebar = document.getElementById('sidebar');
+
+        mobileMenuButton.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent event bubbling
+            sidebar.classList.toggle('-translate-x-full');
+            sidebar.classList.toggle('mobile-menu-open');
+        });
+
+        // Close sidebar when clicking outside
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth < 768) { // Only on mobile
+                if (!sidebar.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                    sidebar.classList.add('-translate-x-full');
+                    sidebar.classList.remove('mobile-menu-open');
+                }
+            }
+        });
+
+        // Submenu toggles
+        const submenuButtons = document.querySelectorAll('.submenu-button');
+
+        submenuButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const submenu = button.nextElementSibling;
+                const arrow = button.querySelector('svg:last-child');
+
+                submenu.classList.toggle('hidden');
+                arrow.classList.toggle('rotate-180');
+            });
+        });
+
+        // Profile dropdown
+        const profileButton = document.getElementById('profile-button');
+        const profileDropdown = document.getElementById('profile-dropdown');
+
+        if (profileButton && profileDropdown) {
+            profileButton.addEventListener('click', (e) => {
+                e.stopPropagation();
+                profileDropdown.classList.toggle('hidden');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!profileButton.contains(e.target)) {
+                    profileDropdown.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+
+    <script>
+        // Add event listeners for dismissible alerts
+        document.querySelectorAll('.dismissible-alert button').forEach(button => {
+            button.addEventListener('click', () => {
+                button.closest('.dismissible-alert').remove();
+            });
+        });
+    </script>
+</body>
+
+</html>

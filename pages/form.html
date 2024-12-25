@@ -56,7 +56,7 @@
             <nav class="mt-6">
                 <div class="px-4 space-y-2">
                     <!-- Dashboard Menu -->
-                    <a href="#" class="flex items-center px-4 py-2 text-gray-700 bg-gray-100 rounded-lg">
+                    <a href="../index.html" class="flex items-center px-4 py-2 text-gray-700 bg-gray-100 rounded-lg">
                         <svg class="w-5 h-5 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
@@ -82,11 +82,11 @@
                             </svg>
                         </button>
                         <div class="submenu pl-8 space-y-1 hidden">
-                            <a href="components/input.html"
+                            <a href="../components/input.html"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Input</a>
-                            <a href="components/button.html"
+                            <a href="../components/button.html"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Buttbn</a>
-                            <a href="components/alerts.html"
+                            <a href="../components/alerts.html"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Alerts</a>
                         </div>
                     </div>
@@ -109,13 +109,13 @@
                             </svg>
                         </button>
                         <div class="submenu pl-8 space-y-1 hidden">
-                            <a href="pages/login.html"
+                            <a href="login.html"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Login</a>
-                            <a href="pages/register.html"
+                            <a href="register.html"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Register</a>
-                            <a href="pages/table.html"
+                            <a href="table.html"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Register</a>
-                            <a href="pages/form.html"
+                            <a href="form.html"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Register</a>
                         </div>
                     </div>
@@ -124,55 +124,130 @@
         </div>
     </aside>
 
-    <!-- Main Content -->
-    <main class="ml-0 md:ml-64 pt-20 p-6">
-        <!-- Dashboard Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-            <div class="p-6 bg-white rounded-lg border border-gray-200">
-                <h3 class="text-xl font-bold">Total Users</h3>
-                <p class="text-2xl mt-2">1,234</p>
-            </div>
-            <div class="p-6 bg-white rounded-lg border border-gray-200">
-                <h3 class="text-xl font-bold">Revenue</h3>
-                <p class="text-2xl mt-2">$5,678</p>
-            </div>
-            <div class="p-6 bg-white rounded-lg border border-gray-200">
-                <h3 class="text-xl font-bold">Orders</h3>
-                <p class="text-2xl mt-2">890</p>
-            </div>
-            <div class="p-6 bg-white rounded-lg border border-gray-200">
-                <h3 class="text-xl font-bold">Products</h3>
-                <p class="text-2xl mt-2">234</p>
-            </div>
-        </div>
+    <main class="ml-0 md:ml-64 pt-16 p-6">
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+            <h3 class="text-xl font-bold mb-6">Form Elements</h3>
 
-        <!-- Table Example -->
-        <div class="bg-white rounded-lg border border-gray-200 p-6 overflow-x-auto">
-            <h3 class="text-xl font-bold mb-4">Recent Orders</h3>
-            <table class="min-w-full divide-y divide-gray-200">
-                <thead>
-                    <tr>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Order ID</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Customer</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Amount</th>
-                    </tr>
-                </thead>
-                <tbody class="divide-y divide-gray-200">
-                    <tr>
-                        <td class="px-6 py-4">#12345</td>
-                        <td class="px-6 py-4">John Doe</td>
-                        <td class="px-6 py-4">Completed</td>
-                        <td class="px-6 py-4">$120.00</td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4">#12346</td>
-                        <td class="px-6 py-4">Jane Smith</td>
-                        <td class="px-6 py-4">Pending</td>
-                        <td class="px-6 py-4">$85.00</td>
-                    </tr>
-                </tbody>
-            </table>
+            <form class="space-y-6">
+                <!-- Basic Information -->
+                <div class="border-b border-gray-200 pb-6">
+                    <h4 class="text-lg font-medium mb-4">Basic Information</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                            <input type="text"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                            <input type="text"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                            <input type="tel"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div class="border-b border-gray-200 pb-6">
+                    <h4 class="text-lg font-medium mb-4">Address</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Street Address</label>
+                            <input type="text"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400">
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">City</label>
+                                <input type="text"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">State</label>
+                                <select
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400">
+                                    <option>Select State</option>
+                                    <option>State 1</option>
+                                    <option>State 2</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">ZIP Code</label>
+                                <input type="text"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Information -->
+                <div class="border-b border-gray-200 pb-6">
+                    <h4 class="text-lg font-medium mb-4">Additional Information</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Gender</label>
+                            <div class="space-x-4">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="gender" class="form-radio">
+                                    <span class="ml-2">Male</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="gender" class="form-radio">
+                                    <span class="ml-2">Female</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="gender" class="form-radio">
+                                    <span class="ml-2">Other</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Interests</label>
+                            <div class="space-x-4">
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" class="form-checkbox">
+                                    <span class="ml-2">Sports</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" class="form-checkbox">
+                                    <span class="ml-2">Music</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" class="form-checkbox">
+                                    <span class="ml-2">Reading</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Bio</label>
+                            <textarea rows="4"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Profile Picture</label>
+                            <input type="file"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Actions -->
+                <div class="flex justify-end space-x-4">
+                    <button type="button"
+                        class="px-6 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">Cancel</button>
+                    <button type="submit"
+                        class="px-6 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700">Submit</button>
+                </div>
+            </form>
         </div>
     </main>
 

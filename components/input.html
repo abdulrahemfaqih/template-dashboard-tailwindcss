@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,7 +60,7 @@
             <nav class="mt-6">
                 <div class="px-4 space-y-2">
                     <!-- Dashboard Menu -->
-                    <a href="#" class="flex items-center px-4 py-2 text-gray-700 bg-gray-100 rounded-lg">
+                <a href="../index.html" class="flex items-center px-4 py-2 text-gray-700 bg-gray-100 rounded-lg">
                         <svg class="w-5 h-5 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
@@ -82,12 +86,10 @@
                             </svg>
                         </button>
                         <div class="submenu pl-8 space-y-1 hidden">
-                            <a href="components/input.html"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Input</a>
-                            <a href="components/button.html"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Buttbn</a>
-                            <a href="components/alerts.html"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Alerts</a>
+                            <a href="../pages/table.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Tables</a>
+                            <a href="../pages/form.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Forms</a>
                         </div>
                     </div>
 
@@ -109,13 +111,9 @@
                             </svg>
                         </button>
                         <div class="submenu pl-8 space-y-1 hidden">
-                            <a href="pages/login.html"
+                            <a href="../pages/login.html"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Login</a>
-                            <a href="pages/register.html"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Register</a>
-                            <a href="pages/table.html"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Register</a>
-                            <a href="pages/form.html"
+                            <a href="../pages/register.html"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Register</a>
                         </div>
                     </div>
@@ -123,59 +121,93 @@
             </nav>
         </div>
     </aside>
+    <main class="ml-0 md:ml-64 pt-16 p-6">
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+            <h3 class="text-xl font-bold mb-6">Alert Components</h3>
 
-    <!-- Main Content -->
-    <main class="ml-0 md:ml-64 pt-20 p-6">
-        <!-- Dashboard Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-            <div class="p-6 bg-white rounded-lg border border-gray-200">
-                <h3 class="text-xl font-bold">Total Users</h3>
-                <p class="text-2xl mt-2">1,234</p>
-            </div>
-            <div class="p-6 bg-white rounded-lg border border-gray-200">
-                <h3 class="text-xl font-bold">Revenue</h3>
-                <p class="text-2xl mt-2">$5,678</p>
-            </div>
-            <div class="p-6 bg-white rounded-lg border border-gray-200">
-                <h3 class="text-xl font-bold">Orders</h3>
-                <p class="text-2xl mt-2">890</p>
-            </div>
-            <div class="p-6 bg-white rounded-lg border border-gray-200">
-                <h3 class="text-xl font-bold">Products</h3>
-                <p class="text-2xl mt-2">234</p>
-            </div>
-        </div>
+            <!-- Basic Alerts -->
+            <div class="border-b border-gray-200 pb-6 mb-6">
+                <h4 class="text-lg font-medium mb-4">Basic Alerts</h4>
+                <div class="space-y-4">
+                    <!-- Success Alert -->
+                    <div class="p-4 border-l-4 border-green-500 bg-green-50 rounded-lg flex items-start">
+                        <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round</svg>" stroke-width="2"
+                                d="M5 13l4 4L19 7" />
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold text-green-800">Success</h3>
+                            <p class="text-green-700">Operation completed successfully.</p>
+                        </div>
+                    </div>
 
-        <!-- Table Example -->
-        <div class="bg-white rounded-lg border border-gray-200 p-6 overflow-x-auto">
-            <h3 class="text-xl font-bold mb-4">Recent Orders</h3>
-            <table class="min-w-full divide-y divide-gray-200">
-                <thead>
-                    <tr>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Order ID</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Customer</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Amount</th>
-                    </tr>
-                </thead>
-                <tbody class="divide-y divide-gray-200">
-                    <tr>
-                        <td class="px-6 py-4">#12345</td>
-                        <td class="px-6 py-4">John Doe</td>
-                        <td class="px-6 py-4">Completed</td>
-                        <td class="px-6 py-4">$120.00</td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4">#12346</td>
-                        <td class="px-6 py-4">Jane Smith</td>
-                        <td class="px-6 py-4">Pending</td>
-                        <td class="px-6 py-4">$85.00</td>
-                    </tr>
-                </tbody>
-            </table>
+                    <!-- Error Alert -->
+                    <div class="p-4 border-l-4 border-red-500 bg-red-50 rounded-lg flex items-start">
+                        <svg class="w-5 h-5 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold text-red-800">Error</h3>
+                            <p class="text-red-700">An error occurred while processing your request.</p>
+                        </div>
+                    </div>
+
+                    <!-- Warning Alert -->
+                    <div class="p-4 border-l-4 border-yellow-500 bg-yellow-50 rounded-lg flex items-start">
+                        <svg class="w-5 h-5 text-yellow-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold text-yellow-800">Warning</h3>
+                            <p class="text-yellow-700">Please review your information before continuing.</p>
+                        </div>
+                    </div>
+
+                    <!-- Info Alert -->
+                    <div class="p-4 border-l-4 border-blue-500 bg-blue-50 rounded-lg flex items-start">
+                        <svg class="w-5 h-5 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold text-blue-800">Information</h3>
+                            <p class="text-blue-700">Updated information is now available.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dismissible Alerts -->
+            <div>
+                <h4 class="text-lg font-medium mb-4">Dismissible Alerts</h4>
+                <div class="space-y-4">
+                    <!-- Dismissible Success Alert -->
+                    <div
+                        class="dismissible-alert p-4 border-l-4 border-green-500 bg-green-50 rounded-lg flex items-start justify-between">
+                        <div class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold text-green-800">Success</h3>
+                                <p class="text-green-700">Operation completed successfully.</p>
+                            </div>
+                        </div>
+                        <button class="text-green-500 hover:text-green-700" onclick="this.parentElement.remove()">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
-
     <script>
         // Mobile menu toggle dengan perbaikan
         const mobileMenuButton = document.getElementById('mobile-menu-button');

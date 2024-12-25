@@ -125,86 +125,96 @@
     </aside>
     <main class="ml-0 md:ml-64 pt-20 p-6">
         <div class="bg-white rounded-lg border border-gray-200 p-6">
-            <h3 class="text-xl font-bold mb-6">Alert Components</h3>
+            <h3 class="text-xl font-bold mb-6">Input Components</h3>
 
-            <!-- Basic Alerts -->
+            <!-- Text Inputs -->
             <div class="border-b border-gray-200 pb-6 mb-6">
-                <h4 class="text-lg font-medium mb-4">Basic Alerts</h4>
-                <div class="space-y-4">
-                    <!-- Success Alert -->
-                    <div class="p-4 border-l-4 border-green-500 bg-green-50 rounded-lg flex items-start">
-                        <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round</svg>" stroke-width="2"
-                                d="M5 13l4 4L19 7" />
-                        </svg>
-                        <div>
-                            <h3 class="font-semibold text-green-800">Success</h3>
-                            <p class="text-green-700">Operation completed successfully.</p>
-                        </div>
+                <h4 class="text-lg font-medium mb-4">Text Inputs</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Default Input</label>
+                        <input type="text"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400"
+                            placeholder="Enter text">
                     </div>
-
-                    <!-- Error Alert -->
-                    <div class="p-4 border-l-4 border-red-500 bg-red-50 rounded-lg flex items-start">
-                        <svg class="w-5 h-5 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                        <div>
-                            <h3 class="font-semibold text-red-800">Error</h3>
-                            <p class="text-red-700">An error occurred while processing your request.</p>
-                        </div>
-                    </div>
-
-                    <!-- Warning Alert -->
-                    <div class="p-4 border-l-4 border-yellow-500 bg-yellow-50 rounded-lg flex items-start">
-                        <svg class="w-5 h-5 text-yellow-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                        </svg>
-                        <div>
-                            <h3 class="font-semibold text-yellow-800">Warning</h3>
-                            <p class="text-yellow-700">Please review your information before continuing.</p>
-                        </div>
-                    </div>
-
-                    <!-- Info Alert -->
-                    <div class="p-4 border-l-4 border-blue-500 bg-blue-50 rounded-lg flex items-start">
-                        <svg class="w-5 h-5 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <div>
-                            <h3 class="font-semibold text-blue-800">Information</h3>
-                            <p class="text-blue-700">Updated information is now available.</p>
-                        </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Disabled Input</label>
+                        <input type="text" disabled
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg bg-gray-50 cursor-not-allowed"
+                            placeholder="Disabled input">
                     </div>
                 </div>
             </div>
 
-            <!-- Dismissible Alerts -->
+            <!-- Number & Date Inputs -->
+            <div class="border-b border-gray-200 pb-6 mb-6">
+                <h4 class="text-lg font-medium mb-4">Numeric & Date Inputs</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Number Input</label>
+                        <input type="number"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400"
+                            placeholder="0">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Date Input</label>
+                        <input type="date"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Select & Textarea -->
+            <div class="border-b border-gray-200 pb-6 mb-6">
+                <h4 class="text-lg font-medium mb-4">Select & Textarea</h4>
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Select Input</label>
+                        <select
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Textarea</label>
+                        <textarea
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400"
+                            rows="4" placeholder="Enter your message"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Checkbox & Radio -->
             <div>
-                <h4 class="text-lg font-medium mb-4">Dismissible Alerts</h4>
+                <h4 class="text-lg font-medium mb-4">Checkbox & Radio</h4>
                 <div class="space-y-4">
-                    <!-- Dismissible Success Alert -->
-                    <div
-                        class="dismissible-alert p-4 border-l-4 border-green-500 bg-green-50 rounded-lg flex items-start justify-between">
-                        <div class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            <div>
-                                <h3 class="font-semibold text-green-800">Success</h3>
-                                <p class="text-green-700">Operation completed successfully.</p>
-                            </div>
+                    <div class="space-y-2">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Checkbox Options</label>
+                        <div class="space-x-4">
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" class="form-checkbox text-gray-800">
+                                <span class="ml-2">Option 1</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" class="form-checkbox text-gray-800">
+                                <span class="ml-2">Option 2</span>
+                            </label>
                         </div>
-                        <button class="text-green-500 hover:text-green-700" onclick="this.parentElement.remove()">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Radio Options</label>
+                        <div class="space-x-4">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="radio-group" class="form-radio text-gray-800">
+                                <span class="ml-2">Option 1</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="radio-group" class="form-radio text-gray-800">
+                                <span class="ml-2">Option 2</span>
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>

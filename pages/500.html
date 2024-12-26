@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Pages</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+    <!-- 500 Page -->
+    <div class="min-h-screen flex flex-col items-center justify-center px-4">
+        <div class="text-center relative">
+            <h1 class="text-[200px] font-bold text-gray-100">500</h1>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <!-- 500 Illustration -->
+                <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Server Shape -->
+                    <rect x="50" y="60" width="100" height="80" rx="8" fill="#374151" />
+                    <!-- Server Lines -->
+                    <line x1="60" y1="80" x2="140" y2="80" stroke="#F3F4F6" stroke-width="4" />
+                    <line x1="60" y1="100" x2="140" y2="100" stroke="#F3F4F6" stroke-width="4" />
+                    <line x1="60" y1="120" x2="140" y2="120" stroke="#F3F4F6" stroke-width="4" />
+                    <!-- Lightning Bolt -->
+                    <path d="M95 40 L110 80 L90 85 L105 120" stroke="#EF4444" stroke-width="8" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Server Error</h2>
+            <p class="text-gray-600 mb-8 max-w-lg">
+                Oops! Something went wrong on our servers. We are working to fix the issue. Please try again later.
+            </p>
+            <div class="space-y-3">
+                <div class="space-x-4">
+                    <a href="/" class="inline-block px-8 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700">
+                        Back to Home
+                    </a>
+                    <button onclick="window.location.reload()"
+                        class="inline-block px-8 py-3 border border-gray-300 rounded-lg hover:bg-gray-50">
+                        Try Again
+                    </button>
+                </div>
+                <p class="text-sm text-gray-500 mt-4">
+                    Error Code: 500_SERVER_ERROR
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

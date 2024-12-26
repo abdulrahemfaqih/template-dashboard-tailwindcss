@@ -93,9 +93,10 @@
                             <a href="button.html"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Button</a>
                             <a href="alerts.html"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg bg-gray-100">Alerts</a>
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Alerts</a>
                             <a href="modal.html"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Modal</a>
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg bg-gray-100">Modal</a>
+
                         </div>
                     </div>
 
@@ -144,156 +145,197 @@
     </aside>
     <main class="ml-0 md:ml-64 pt-20 p-6">
         <div class="bg-white rounded-lg border border-gray-200 p-6">
-            <h3 class="text-xl font-bold mb-6">Alert Components</h3>
+            <h1 class="text-2xl font-bold mb-6">Modal Components</h1>
 
-            <!-- Basic Alerts -->
-            <div class="border-b border-gray-200 pb-6 mb-6">
-                <h4 class="text-lg font-medium mb-4">Basic Alerts</h4>
-                <div class="space-y-4">
-                    <!-- Success Alert -->
-                    <div class="p-4 border-l-4 border-green-500 bg-green-50 rounded-lg flex items-start">
-                        <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                        </svg>
-                        <div>
-                            <h3 class="font-semibold text-green-800">Success</h3>
-                            <p class="text-green-700">Operation completed successfully.</p>
+            <!-- Modal Triggers -->
+            <div class="flex flex-wrap gap-4 mb-8">
+                <button onclick="openModal('small-modal')"
+                    class="inline-flex px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors">
+                    Open Small Modal
+                </button>
+
+                <button onclick="openModal('medium-modal')"
+                    class="inline-flex px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors">
+                    Open Medium Modal
+                </button>
+
+                <button onclick="openModal('large-modal')"
+                    class="inline-flex px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors">
+                    Open Large Modal
+                </button>
+
+                <!-- Small Modal -->
+                <div id="small-modal"
+                    class="fixed inset-0 bg-gray-500 bg-opacity-75 hidden items-center justify-center z-50">
+                    <div class="bg-white rounded-lg w-full max-w-sm mx-4">
+                        <div class="p-4 border-b border-gray-200">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold">Small Modal</h3>
+                                <button onclick="closeModal('small-modal')" class="text-gray-400 hover:text-gray-500">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <p>This is a small modal dialog. Perfect for simple confirmations or brief messages.</p>
+                        </div>
+                        <div class="p-4 border-t border-gray-200 flex justify-end space-x-3">
+                            <button onclick="closeModal('small-modal')"
+                                class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">
+                                Cancel
+                            </button>
+                            <button class="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700">
+                                Confirm
+                            </button>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Error Alert -->
-                    <div class="p-4 border-l-4 border-red-500 bg-red-50 rounded-lg flex items-start">
-                        <svg class="w-5 h-5 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                        <div>
-                            <h3 class="font-semibold text-red-800">Error</h3>
-                            <p class="text-red-700">An error occurred while processing your request.</p>
+                <!-- Medium Modal -->
+                <div id="medium-modal"
+                    class="fixed inset-0 bg-gray-500 bg-opacity-75 hidden items-center justify-center z-50">
+                    <div class="bg-white rounded-lg w-full max-w-md mx-4">
+                        <div class="p-4 border-b border-gray-200">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold">Medium Modal</h3>
+                                <button onclick="closeModal('medium-modal')" class="text-gray-400 hover:text-gray-500">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <p class="mb-4">This is a medium-sized modal dialog. It's suitable for forms and more
+                                detailed
+                                content.</p>
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                                    <input type="text"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                    <input type="email"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4 border-t border-gray-200 flex justify-end space-x-3">
+                            <button onclick="closeModal('medium-modal')"
+                                class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">
+                                Cancel
+                            </button>
+                            <button class="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700">
+                                Save
+                            </button>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Warning Alert -->
-                    <div class="p-4 border-l-4 border-yellow-500 bg-yellow-50 rounded-lg flex items-start">
-                        <svg class="w-5 h-5 text-yellow-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                        </svg>
-                        <div>
-                            <h3 class="font-semibold text-yellow-800">Warning</h3>
-                            <p class="text-yellow-700">Please review your information before continuing.</p>
+                <!-- Large Modal -->
+                <div id="large-modal"
+                    class="fixed inset-0 bg-gray-500 bg-opacity-75 hidden items-center justify-center z-50">
+                    <div class="bg-white rounded-lg w-full max-w-2xl mx-4">
+                        <div class="p-4 border-b border-gray-200">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold">Large Modal</h3>
+                                <button onclick="closeModal('large-modal')" class="text-gray-400 hover:text-gray-500">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
-                    </div>
-
-                    <!-- Info Alert -->
-                    <div class="p-4 border-l-4 border-blue-500 bg-blue-50 rounded-lg flex items-start">
-                        <svg class="w-5 h-5 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <div>
-                            <h3 class="font-semibold text-blue-800">Information</h3>
-                            <p class="text-blue-700">Updated information is now available.</p>
+                        <div class="p-4">
+                            <p class="mb-4">This is a large modal dialog. Perfect for complex forms, detailed content,
+                                or
+                                data
+                                tables.</p>
+                            <div class="space-y-4">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                                        <input type="text"
+                                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                                        <input type="text"
+                                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                    <input type="email"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                    <textarea rows="4"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4 border-t border-gray-200 flex justify-end space-x-3">
+                            <button onclick="closeModal('large-modal')"
+                                class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">
+                                Cancel
+                            </button>
+                            <button class="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700">
+                                Submit
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Dismissible Alerts -->
-            <div>
-                <h4 class="text-lg font-medium mb-4">Dismissible Alerts</h4>
-                <div class="space-y-4">
-                    <!-- Dismissible Success Alert -->
-                    <div
-                        class="dismissible-alert p-4 border-l-4 border-green-500 bg-green-50 rounded-lg flex items-start justify-between">
-                        <div class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            <div>
-                                <h3 class="font-semibold text-green-800">Success</h3>
-                                <p class="text-green-700">Operation completed successfully.</p>
-                            </div>
-                        </div>
-                        <button class="text-green-500 hover:text-green-600">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-                    </div>
-
-                    <!-- Dismissible Error Alert -->
-                    <div
-                        class="dismissible-alert p-4 border-l-4 border-red-500 bg-red-50 rounded-lg flex items-start justify-between">
-                        <div class="flex items-start">
-                            <svg class="w-5 h-5 text-red-500 mr-3" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                            <div>
-                                <h3 class="font-semibold text-red-800">Error</h3>
-                                <p class="text-red-700">An error occurred while processing your request.</p>
-                            </div>
-                        </div>
-                        <button class="text-red-500 hover:text-red-600">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-                    </div>
-
-                    <!-- Dismissible Warning Alert -->
-                    <div
-                        class="dismissible-alert p-4 border-l-4 border-yellow-500 bg-yellow-50 rounded-lg flex items-start justify-between">
-                        <div class="flex items-start">
-                            <svg class="w-5 h-5 text-yellow-500 mr-3" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                            </svg>
-                            <div>
-                                <h3 class="font-semibold text-yellow-800">Warning</h3>
-                                <p class="text-yellow-700">Please review your information before continuing.</p>
-                            </div>
-                        </div>
-                        <button class="text-yellow-500 hover:text-yellow-600">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-                    </div>
-
-                    <!-- Dismissible Info Alert -->
-                    <div
-                        class="dismissible-alert p-4 border-l-4 border-blue-500 bg-blue-50 rounded-lg flex items-start justify-between">
-                        <div class="flex items-start">
-                            <svg class="w-5 h-5 text-blue-500 mr-3" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <div>
-                                <h3 class="font-semibold text-blue-800">Information</h3>
-                                <p class="text-blue-700">Updated information is now available.</p>
-                            </div>
-                        </div>
-                        <button class="text-blue-500 hover:text-blue-600">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </main>
+
+    <script>
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.addEventListener('click', (e) => {
+            const modals = document.querySelectorAll('[id$="-modal"]');
+            modals.forEach(modal => {
+                if (e.target === modal) {
+                    const modalId = modal.getAttribute('id');
+                    closeModal(modalId);
+                }
+            });
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const modals = document.querySelectorAll('[id$="-modal"]');
+                modals.forEach(modal => {
+                    if (!modal.classList.contains('hidden')) {
+                        const modalId = modal.getAttribute('id');
+                        closeModal(modalId);
+                    }
+                });
+            }
+        });
+    </script>
     <script>
         // Mobile menu toggle dengan perbaikan
         const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -344,15 +386,6 @@
                 }
             });
         }
-    </script>
-
-    <script>
-        // Add event listeners for dismissible alerts
-        document.querySelectorAll('.dismissible-alert button').forEach(button => {
-            button.addEventListener('click', () => {
-                button.closest('.dismissible-alert').remove();
-            });
-        });
     </script>
 </body>
 

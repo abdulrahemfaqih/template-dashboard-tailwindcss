@@ -96,7 +96,6 @@
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Alerts</a>
                             <a href="../components/modal.html"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Modal</a>
-
                         </div>
                     </div>
 
@@ -125,7 +124,7 @@
                             <a href="table.html"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Table</a>
                             <a href="form.html"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg bg-gray-100">Form</a>
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg ">Form</a>
                             <a href="404.html"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">404 Not
                                 Found</a>
@@ -140,11 +139,11 @@
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Blank
                                 Page</a>
                             <a href="profile.html"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Profile</a>
-
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg bg-gray-100">Profile</a>
 
                         </div>
                     </div>
+                    <!-- Repository Info Menu -->
                     <div class="mt-4">
                         <hr>
                         <a href="https://github.com/abdulrahemfaqih/template-dashboard-tailwindcss" target="_blank"
@@ -162,132 +161,91 @@
     </aside>
 
     <main class="ml-0 md:ml-64 pt-20 p-6">
+        <!-- User Profile Section -->
         <div class="bg-white rounded-lg border border-gray-200 p-6">
-            <h3 class="text-xl font-bold mb-6">Form Elements</h3>
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-2xl font-bold">User Profile</h1>
+                <button id="edit-profile" class="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700">
+                    Edit Profile
+                </button>
+            </div>
 
-            <form class="space-y-6">
-                <!-- Basic Information -->
-                <div class="border-b border-gray-200 pb-6">
-                    <h4 class="text-lg font-medium mb-4">Basic Information</h4>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
-                            <input type="text"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
-                            <input type="text"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                            <input type="email"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
-                            <input type="tel"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400">
-                        </div>
-                    </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Profile Picture Section -->
+                <div class="md:col-span-1 flex flex-col items-center">
+                    <img src="https://via.placeholder.com/150" alt="Profile Picture"
+                        class="w-32 h-32 rounded-full mb-4">
+                    <h2 class="text-xl font-semibold mb-2">John Doe</h2>
+                    <p class="text-gray-600">Administrator</p>
                 </div>
 
-                <!-- Address -->
-                <div class="border-b border-gray-200 pb-6">
-                    <h4 class="text-lg font-medium mb-4">Address</h4>
-                    <div class="space-y-4">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Street Address</label>
-                            <input type="text"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400">
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Profile Details Section -->
+                <div class="md:col-span-2">
+                    <!-- Replace the content with form wrapper -->
+                    <form method="POST" action="#" class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
                             <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">City</label>
-                                <input type="text"
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400">
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                <input type="email" name="email" value="admin@admin.com"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400"
+                                    disabled>
                             </div>
                             <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">State</label>
-                                <select
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400">
-                                    <option>Select State</option>
-                                    <option>State 1</option>
-                                    <option>State 2</option>
-                                </select>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Role</label>
+                                <input type="text" name="role" value="Administrator"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400"
+                                    disabled>
                             </div>
                             <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">ZIP Code</label>
-                                <input type="text"
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400">
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Join Date</label>
+                                <input type="text" name="join_date" value="January 1, 2024"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400"
+                                    disabled>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Additional Information -->
-                <div class="border-b border-gray-200 pb-6">
-                    <h4 class="text-lg font-medium mb-4">Additional Information</h4>
-                    <div class="space-y-4">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Gender</label>
-                            <div class="space-x-4">
-                                <label class="inline-flex items-center">
-                                    <input type="radio" name="gender" class="form-radio">
-                                    <span class="ml-2">Male</span>
-                                </label>
-                                <label class="inline-flex items-center">
-                                    <input type="radio" name="gender" class="form-radio">
-                                    <span class="ml-2">Female</span>
-                                </label>
-                                <label class="inline-flex items-center">
-                                    <input type="radio" name="gender" class="form-radio">
-                                    <span class="ml-2">Other</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Interests</label>
-                            <div class="space-x-4">
-                                <label class="inline-flex items-center">
-                                    <input type="checkbox" class="form-checkbox">
-                                    <span class="ml-2">Sports</span>
-                                </label>
-                                <label class="inline-flex items-center">
-                                    <input type="checkbox" class="form-checkbox">
-                                    <span class="ml-2">Music</span>
-                                </label>
-                                <label class="inline-flex items-center">
-                                    <input type="checkbox" class="form-checkbox">
-                                    <span class="ml-2">Reading</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div>
+                        <!-- Bio Section -->
+                        <div class="mt-4">
                             <label class="block text-sm font-medium text-gray-700 mb-1">Bio</label>
-                            <textarea rows="4"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400"></textarea>
+                            <textarea name="bio"
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400"
+                                rows="4"></textarea>
                         </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Profile Picture</label>
-                            <input type="file"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400">
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Form Actions -->
-                <div class="flex justify-end space-x-4">
-                    <button type="button"
-                        class="px-6 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">Cancel</button>
-                    <button type="submit"
-                        class="px-6 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700">Submit</button>
+                        <!-- Submit Button -->
+                        <div class="mt-4 hidden" id="saveChangesBtn">
+                            <button type="submit"
+                                class="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-white">
+                                Save Changes
+                            </button>
+                        </div>
+                    </form>
                 </div>
-            </form>
+            </div>
         </div>
     </main>
+    <script>
+        const editProfileBtn = document.getElementById('edit-profile');
+        const inputs = document.querySelectorAll('input, textarea');
+        const saveChangesBtn = document.getElementById('saveChangesBtn');
 
+        editProfileBtn.addEventListener('click', () => {
+            const isEditing = editProfileBtn.textContent.trim() === 'Edit Profile';
+
+            if (isEditing) {
+                editProfileBtn.textContent = 'Cancel';
+                editProfileBtn.classList.remove('bg-gray-800', 'hover:bg-gray-700');
+                editProfileBtn.classList.add('bg-red-600', 'hover:bg-red-700');
+                inputs.forEach(input => input.disabled = false);
+                saveChangesBtn.classList.remove('hidden'); // Show save button
+            } else {
+                editProfileBtn.textContent = 'Edit Profile';
+                editProfileBtn.classList.remove('bg-red-600', 'hover:bg-red-700');
+                editProfileBtn.classList.add('bg-gray-800', 'hover:bg-gray-700');
+                inputs.forEach(input => input.disabled = true);
+                saveChangesBtn.classList.add('hidden'); // Hide save button
+            }
+        });
+    </script>
     <script>
         // Mobile menu toggle dengan perbaikan
         const mobileMenuButton = document.getElementById('mobile-menu-button');

@@ -54,5 +54,14 @@ template/
 │   └── register
 └── index.html
 ```
+## Menu Activation Guide
 
-...
+### How to Activate Submenus
+1. Add `rotate-180` class to arrow SVG:
+
+
+2. Remove `hidden` class from submenu:
+
+
+3. Add `bg-gray-100` to active menu item:
+

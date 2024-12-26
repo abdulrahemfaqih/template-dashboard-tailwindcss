@@ -5,12 +5,11 @@ A free, open-source dashboard template built with Tailwind CSS. Perfect for admi
 ## Features
 - 🎨 Built with Tailwind CSS by CDN Tailwinds
 - 📱 Fully Responsive Design
-- 📝 Form Components
+- 📝 More Components
 - 🔐 Authentication Pages
 - 🎯 Easy to Customize
 - 📦 Easy to Use
 - 🚀 Fast Loading
-- Table Components
 
 ## Live Demo
 [View Demo](https://template-dashboard-tailwindcss.vercel.app/)

@@ -12,6 +12,7 @@
     <meta name="robots" content="index, follow">
     <title>Modern Tailwind CSS Dashboard Template - Free Admin Panel</title>
     <script src="../main.js"></script>
+    <script src="../toast.js"></script>
     <style>
         .rotate-180 {
             transform: rotate(180deg);
@@ -81,23 +82,23 @@
                                 </svg>
                                 <span>Components</span>
                             </div>
-                            <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
+                            <svg class="w-4 h-4 transition-transform duration-200 rotate-180" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
-                        <div class="submenu pl-8 space-y-1 hidden overflow-y-auto max-h-52">
-                            <a href="../components/input.html"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Input</a>
-                            <a href="../components/button.html"
+                        <div class="submenu pl-8 space-y-1 overflow-y-auto max-h-52">
+                            <a href="input.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg ">Input</a>
+                            <a href="button.html"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Button</a>
-                            <a href="../components/alerts.html"
+                            <a href="alerts.html"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Alerts</a>
-                            <a href="../components/modal.html"
+                            <a href="modal.html"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Modal</a>
-                            <a href="../components/toast.html"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Toast</a>
+                            <a href="toast.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg bg-gray-100">Toast</a>
                         </div>
                     </div>
 
@@ -112,40 +113,38 @@
                                 </svg>
                                 <span>Pages</span>
                             </div>
-                            <svg class="w-4 h-4 transition-transform duration-200 rotate-180" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
-                        <div class="submenu pl-8 space-y-1 overflow-y-auto max-h-52 md:max-h-full">
-                            <a href="login.html"
+                        <div class="submenu pl-8 space-y-1 hidden overflow-y-auto max-h-52 md:max-h-full">
+                            <a href="../pages/login.html"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Login</a>
-                            <a href="register.html"
+                            <a href="../pages/register.html"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Register</a>
-                            <a href="table.html"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg bg-gray-100">Table</a>
-                            <a href="form.html"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg ">Form</a>
-                            <a href="404.html"
+                            <a href="../pages/table.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Table</a>
+                            <a href="../pages/form.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Form</a>
+                            <a href="../pages/404.html"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">404 Not
                                 Found</a>
-                            <a href="403.html"
+                            <a href="../pages/403.html"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">403
                                 Forbidden</a>
 
-                            <a href="500.html"
+                            <a href="../pages/500.html"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">500 Server
                                 Error</a>
-                            <a href="blank.html"
+                            <a href="../pages/blank.html"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Blank
                                 Page</a>
-                            <a href="profile.html"
+                            <a href="../pages/profile.html"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Profile</a>
-
                         </div>
                     </div>
-                    <!-- Repository Info Menu -->
                     <div class="mt-4">
                         <hr>
                         <a href="https://github.com/abdulrahemfaqih/template-dashboard-tailwindcss" target="_blank"
@@ -161,90 +160,68 @@
             </nav>
         </div>
     </aside>
-
     <main class="ml-0 md:ml-64 pt-20 p-6">
         <div class="bg-white rounded-lg border border-gray-200 p-6">
-            <!-- Modified this section for better mobile responsiveness -->
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
-                <h3 class="text-xl font-bold">Data Tables</h3>
-                <div class="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
-                    <input type="text" placeholder="Search..."
-                        class="w-full sm:w-auto px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400">
-                    <button class="w-full sm:w-auto bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700">Add
-                        New</button>
+            <h3 class="text-xl font-bold mb-6">Toast Notifications</h3>
+
+            <!-- Basic Toast Examples -->
+            <div class="border-b border-gray-200 pb-6 mb-6">
+                <h4 class="text-lg font-medium mb-4">Basic Toast Examples</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-4">
+                        <button onclick="toast.success('Operation completed successfully!')"
+                            class="w-full px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors">
+                            Show Success Toast
+                        </button>
+                        <button onclick="toast.error('An error occurred!')"
+                            class="w-full px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors">
+                            Show Error Toast
+                        </button>
+                    </div>
+                    <div class="space-y-4">
+                        <button onclick="toast.warning('Please be careful!')"
+                            class="w-full px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition-colors">
+                            Show Warning Toast
+                        </button>
+                        <button onclick="toast.info('Here is some information')"
+                            class="w-full px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
+                            Show Info Toast
+                        </button>
+                    </div>
                 </div>
             </div>
 
-            <!-- Rest of the content remains the same -->
-            <div class="overflow-x-auto">
-                <table class="min-w-full divide-y divide-gray-200">
-                    <thead>
-                        <tr>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                <input type="checkbox" class="rounded border-gray-300">
-                            </th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                ID</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Name</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Email</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Status</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Date</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody class="bg-white divide-y divide-gray-200">
-                        <tr>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <input type="checkbox" class="rounded border-gray-300">
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">#12345</td>
-                            <td class="px-6 py-4 whitespace-nowrap">John Doe</td>
-                            <td class="px-6 py-4 whitespace-nowrap">john@example.com</td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span
-                                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Active</span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">2024-01-01</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                <button class="text-blue-600 hover:text-blue-900 mr-3">Edit</button>
-                                <button class="text-red-600 hover:text-red-900">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <input type="checkbox" class="rounded border-gray-300">
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">#12346</td>
-                            <td class="px-6 py-4 whitespace-nowrap">Jane Smith</td>
-                            <td class="px-6 py-4 whitespace-nowrap">jane@example.com</td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span
-                                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">Pending</span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">2024-01-02</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                <button class="text-blue-600 hover:text-blue-900 mr-3">Edit</button>
-                                <button class="text-red-600 hover:text-red-900">Delete</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <!-- Custom Duration Toast -->
+            <div class="border-b border-gray-200 pb-6 mb-6">
+                <h4 class="text-lg font-medium mb-4">Custom Duration Toast</h4>
+                <button onclick="toast.success('This toast will show for 5 seconds', 5000)"
+                    class="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-colors">
+                    Show Long Duration Toast (5s)
+                </button>
             </div>
 
-            <!-- Pagination -->
-            <div class="flex items-center justify-between mt-6">
-                <div class="text-sm text-gray-500">
-                    Showing 1 to 2 of 2 entries
-                </div>
-                <div class="flex space-x-2">
-                    <button class="px-3 py-1 border border-gray-300 rounded-lg hover:bg-gray-50">Previous</button>
-                    <button class="px-3 py-1 bg-gray-800 text-white rounded-lg">1</button>
-                    <button class="px-3 py-1 border border-gray-300 rounded-lg hover:bg-gray-50">Next</button>
+            <!-- Usage Example Code -->
+            <div>
+                <h4 class="text-lg font-medium mb-4">Usage Example</h4>
+                <div class="bg-gray-100 p-4 rounded-lg">
+                    <pre class="text-sm">
+// tambahkan file toast.js pada tag script
+
+// Basic usage
+toast.success('Operation completed successfully!');
+toast.error('An error occurred!');
+toast.warning('Please be careful!');
+toast.info('Here is some information');
+
+// With custom duration (milliseconds)
+toast.success('Message', 5000);
+
+// Using the output method
+toast.output({
+    message: 'Custom message',
+    type: 'success', // 'success', 'error', 'warning', 'info'
+    duration: 3000  // optional, defaults to 3000ms
+});</pre>
                 </div>
             </div>
         </div>
